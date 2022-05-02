@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Perfil</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/perfilVendedor.css}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/images/logo.PNG}">
+    </div>
+    <div class="paginaPerfilUsuario">
+        <div class="opciones">
+            <div class="bienvenido">Mi perfil</div>
+            <div class="rectangulo-navegacion">
+                <p>
+                    <a class="perfil" th:href="@{/vendedor/perfilVendedor}">
+                        <img th:src="@{/images/perfil.PNG}" class="foto-perfil">
+                        Perfil
+                    </a>
+                </p>
+                <p>
+                    <a class="ayuda" th:href="@{/vendedor/ayuda}">
+                        <img th:src="@{/images/ayuda.PNG}" class="foto-ayuda">
+                        Ayuda
+                    </a>
+                </p>
+            </div>
+            <button onclick="history.go(-1)">Volver</button>
+            <button onclick="window.location.href='/'">Cerrar sesión</button>
+        </div>
+        <div class="infoUsuario">
+            <div class="parte-derecha">
+                <p>Nombre y apellidos:</p>
+                <p>Correo:</p>
+                <p>Teléfono móvil:</p>
+                <p>Contraseña:</p>
+                <p>Dirección:</p>
+                <p>Nombre negocio:</p>
+                <p>Horario:</p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

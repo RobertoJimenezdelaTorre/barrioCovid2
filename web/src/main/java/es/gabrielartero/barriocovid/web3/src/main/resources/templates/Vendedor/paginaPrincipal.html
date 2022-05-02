@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Página principal</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/paginaPrincipal.css}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/images/logo.PNG}">
+    </div>
+    <div class="paginaPrincipal">
+        <div class="opciones">
+            <div class="bienvenido">¡Bienvenido!</div>
+            <div class="rectangulo-navegacion">
+                <p>
+                    <a class="perfil" th:href="@{/vendedor/perfilVendedor}">
+                        <img th:src="@{/images/perfil.PNG}" class="foto-perfil">
+                        Perfil
+                    </a>
+                </p>
+                <p>
+                    <a class="ayuda" th:href="@{/vendedor/ayuda}">
+                        <img th:src="@{/images/ayuda.PNG}" class="foto-ayuda">
+                        Ayuda
+                    </a>
+                </p>
+            </div>
+            <button onclick="window.location.href='/'">Cerrar sesión</button>
+        </div>
+        <div class="productos" th:switch="${productos}">
+            <a class="input-buscar">
+                <a class="tusProdcutos">Tus productos:</a>
+                <img th:src="@{/images/añadirProducto.png}" class="fotoAñadirProducto">
+                <a href="/vendedor/productos/nuevoProducto" class="textoAñadirProducto">Añadir producto</a>
+            </a>
+            <div class="scroll-productos" th:case="*">
+                <div class="mensajes">
+                    <div class="texto" th:each="producto : ${productos}">
+                        <a th:text="${producto.nombre}"></a>
+
+                        <a class="precio">(</a><a class="precio" th:text="${producto.precio}"></a><a class="precio">
+                            €)</a>
+
+                        <a class="descripcion">(</a><a class="descripcion" th:text="${producto.descripcion}"></a><a
+                            class="descripcion">)
+                        </a>
+
+                        <a class="stock">Stock: </a><a th:text="${producto.stock}" class="stock"></a>
+
+                        <a th:href="@{/vendedor/productos/borrar/{id}(id=${producto.id})}">
+                            <img th:src="@{/images/basura.png}" class="iconos">
+                        </a>
+                        <a th:href="@{/vendedor/productos/editarProducto/{id}(id=${producto.id})}">
+                            <img th:src="@{/images/editarProducto.png}" class="iconos">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

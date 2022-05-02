@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Añadir producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/añadirProducto.css}'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/images/logo.PNG}">
+    </div>
+    <div class="paginaPrincipal">
+        <div class="opciones">
+            <div class="bienvenido">Añadir producto</div>
+            <div class="rectangulo-navegacion">
+                <p>
+                    <a class="perfil" th:href="@{/vendedor/perfilVendedor}">
+                        <img th:src="@{/images/perfil.PNG}" class="foto-perfil">
+                        Perfil
+                    </a>
+                </p>
+                <p>
+                    <a class="ayuda" th:href="@{/vendedor/ayuda}">
+                        <img th:src="@{/images/ayuda.PNG}" class="foto-ayuda">
+                        Ayuda
+                    </a>
+                </p>
+            </div>
+            <button onclick="window.location.href='/'">Cerrar sesión</button>
+        </div>
+        <div class="añadirProducto">
+            <form action="#" th:action="@{/vendedor/productos/añadir}" th:object="${producto}" method="post">
+                <div class="formulario">
+                    <div class="nombre">
+                        <label for="nombre" class="textoNombre">Nombre</label>
+                        <p></p>
+                        <input type="text" th:field="*{nombre}" id="nombre" placeholder="Nombre" class="inputNombre">
+                        <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+                    </div>
+                    <div class="precio">
+                        <label for="precio" class="textoPrecio">Precio</label>
+                        <p></p>
+                        <input type="text" th:field="*{precio}" id="precio" placeholder="Precio" class="inputPrecio">
+                        <span th:if="${#fields.hasErrors('precio')}" th:errors="*{precio}"></span>
+                    </div>
+
+                    <div class="descripcion">
+                        <label for="descripcion" class="textoDescripcion">Descripción</label>
+                        <p></p>
+                        <input type="text" th:field="*{descripcion}" id="descripcion" placeholder="Descripción"
+                            class="inputDescripcion">
+                        <span th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></span>
+                    </div>
+
+                    <div class="tienda">
+                        <label for="tienda" class="textoTienda">Tienda</label>
+                        <p></p>
+                        <input type="text" th:field="*{tienda}" id="tienda" placeholder="Tienda" class="inputTienda">
+                        <span th:if="${#fields.hasErrors('tienda')}" th:errors="*{tienda}"></span>
+                    </div>
+
+                    <div class="stock">
+                        <label for="stock" class="textoStock">Stock</label>
+                        <p></p>
+                        <input type="number" th:field="*{stock}" id="stock" placeholder="Stock" class="inputStock">
+                        <span th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}"></span>
+                    </div>
+
+                    <div class="botonAñadirProducto">
+                        <input type="submit" value="Añadir producto" class="submitProducto">
+                    </div>
+
+                    <button onclick="history.go(-1)" class="cancelar">Cancelar</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
