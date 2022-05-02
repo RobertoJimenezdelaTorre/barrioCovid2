@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BarrioCovid</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/index.css}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/images/logo.PNG}">
+    </div>
+    <a class="paginaInicio">
+        <div class="textoInicio">
+            <p>BarrioCovid surge con la idea de apoyar al comercio local en un momento donde los pequeños comercios se
+                han visto muy afectados por la pandemia de la COVID-19. Además, ayudamos a personas que están confinadas
+                a poder recibir su compra y permitimos a aquellos vecinos que lo deseen, poder ayudar con las entregas
+                de los pedidos.</p>
+            <p>Inicia sesión o regístrate para vender o comprar tus productos, o para unirte al grupo de vecinos que
+                ayudan a los repartos.</p>
+            <div class="eslogan">¡APOYA AL COMERCIO LOCAL!</div>
+        </div>
+        <div class="inicioSesion">
+            <p>Inicia sesión</p>
+            <p><input placeholder="Correo"></p>
+            <p><input placeholder="Contraseña"></p>
+            <!-- <p><a th:href="@{/usuario/paginaPrincipal}" class="boton-inicio-sesion">Iniciar sesion</a></p> -->
+            <button onclick="window.location.href='/usuario/paginaPrincipal'">Iniciar sesión</button>
+            <p class="olvidadoContraseña">He olvidado mi contraseña</p>
+        </div>
+
+    </a>
+
+
+</body>
+
+</html>
