@@ -1,4 +1,4 @@
-package es.gabrielartero.barriocovid.web2.controller;
+package es.gabrielartero.barriocovid.web.controller;
 
 
 

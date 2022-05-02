@@ -1,4 +1,4 @@
-package es.gabrielartero.barriocovid.web2.controller;
+package es.gabrielartero.barriocovid.web.controller;
 
 
 //import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import es.gabrielartero.barriocovid.web2.model.Producto;
-import es.gabrielartero.barriocovid.web2.repository.ProductoRepository;
+import es.gabrielartero.barriocovid.web.model.Producto;
+import es.gabrielartero.barriocovid.web.repository.ProductoRepository;
 
 @RequestMapping("/usuario/")
 @Controller

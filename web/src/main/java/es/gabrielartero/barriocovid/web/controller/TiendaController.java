@@ -1,4 +1,4 @@
-package es.gabrielartero.barriocovid.web2.controller;
+package es.gabrielartero.barriocovid.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-//import es.gabrielartero.barriocovid.web2.model.Tienda;
-import es.gabrielartero.barriocovid.web2.repository.TiendaRepository;
+//import es.gabrielartero.barriocovid.web.model.Tienda;
+import es.gabrielartero.barriocovid.web.repository.TiendaRepository;
 
 @Controller
 @RequestMapping("/usuario")

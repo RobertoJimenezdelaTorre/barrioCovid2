@@ -1,4 +1,4 @@
-package es.gabrielartero.barriocovid.web2.model;
+package es.gabrielartero.barriocovid.web.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

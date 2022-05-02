@@ -1,10 +1,10 @@
-package es.gabrielartero.barriocovid.web2.controller;
+package es.gabrielartero.barriocovid.web.controller;
 
 //import org.springframework.ui.Model;
 //import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-//import es.gabrielartero.barriocovid.web2.repository.CarritoRepository;
+//import es.gabrielartero.barriocovid.web.repository.CarritoRepository;
 
 
 

@@ -1,4 +1,4 @@
-package es.gabrielartero.barriocovid.web2.repository;
+package es.gabrielartero.barriocovid.web.repository;
 
 import org.springframework.stereotype.Repository;
 
