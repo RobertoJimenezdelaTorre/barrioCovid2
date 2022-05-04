@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mis compras</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/misComprasUsuario.css}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/images/logo.PNG}">
+    </div>
+    <div class="paginaMisCompras">
+        <div class="opciones">
+            <div class="bienvenido">Mis compras</div>
+            <div class="rectangulo-navegacion">
+                <p>
+                    <a class="perfil" th:href="@{/usuario/perfilUsuario}">
+                        <img th:src="@{/images/perfil.PNG}" class="foto-perfil">
+                        Perfil
+                    </a>
+                </p>
+                <p>
+                    <a class="carrito" th:href="@{/usuario/carritoUsuario}">
+                        <img th:src="@{/images/carrito.PNG}" class="foto-carrito">
+                        Carrito
+                    </a>
+                </p>
+                <p>
+                    <a class="miscompras" th:href="@{/usuario/misComprasUsuario}">
+                        <img th:src="@{/images/miscompras.PNG}" class="foto-miscompras">
+                        Mis compras
+                    </a>
+                </p>
+                <p>
+                    <a class="ayuda" th:href="@{/usuario/ayuda}">
+                        <img th:src="@{/images/ayuda.PNG}" class="foto-ayuda">
+                        Ayuda
+                    </a>
+                </p>
+                <p>
+                    <a class="entrega-solidaria" th:href="@{/usuario/entregaSolidaria}">
+                        <img th:src="@{/images/entrega-solidaria.PNG}" class="foto-entrega">
+                        Entrega solidaria
+                    </a>
+                </p>
+            </div>
+            <button onclick="window.location.href='/usuario/paginaPrincipal'">Volver</button>
+            <button onclick="window.location.href='/'">Cerrar sesión</button>
+        </div>
+        <div class="productos">
+            <a class="texto-productos-seleccionados">
+                <div>Mis compras anteriores:</div>
+            </a>
+            <div class="scroll-productos">
+                <div class="mensajes">
+                    <div class="texto">23/03/2022</div>
+                    <div class="texto">02/03/2022</div>
+                    <div class="texto">15/01/2022</div>
+                    <div class="texto">24/12/2021</div>
+                    <div class="texto">10/12/2021</div>
+                    <div class="texto">13/11/2021</div>
+                    <div class="texto">06/10/2021</div>
+                    <div class="texto">12/09/2021</div>
+                    <div class="texto">02/09/2021</div>
+                    <div class="texto">20/08/2021</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
