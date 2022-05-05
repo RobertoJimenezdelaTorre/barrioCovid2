@@ -1,3 +1,26 @@
+INSERT INTO roles (name) VALUES ('USUARIO');
+INSERT INTO roles (name) VALUES ('VENDEDOR');
+INSERT INTO roles (name) VALUES ('REPARTIDOR');
+INSERT INTO roles (name) VALUES ('CONFINADO');
+
+
+INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Gabriel', 'gabriel@gmail.com', 'gabriel', 'Calle Gabriel, 23');
+INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Roberto', 'roberto@gmail.com', 'roberto', 'Calle Roberto, 23');
+INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Carlota', 'carlota@gmail.com', 'carlota', 'Calle Carlota, 23');
+INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Comercios Irene', 'irene@gmail.com', 'irene', 'Calle Irene, 23');
+INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Comercios Pedro', 'pedro@gmail.com', 'pedro', 'Calle Pedro, 23');
+
+
+
+INSERT INTO users_roles (user_id, role_id) VALUES (1, 1); 
+INSERT INTO users_roles (user_id, role_id) VALUES (2, 1);  
+INSERT INTO users_roles (user_id, role_id) VALUES (2, 4); 
+INSERT INTO users_roles (user_id, role_id) VALUES (3, 1); 
+INSERT INTO users_roles (user_id, role_id) VALUES (3, 3); 
+INSERT INTO users_roles (user_id, role_id) VALUES (4, 2); 
+INSERT INTO users_roles (user_id, role_id) VALUES (5, 2);
+
+
 insert into tablaproductos (nombre, precio, descripcion, tienda,  stock, elegido)values('Platanos de canarias', 5, '1kg', 'Comercios Paco', 5, false);
 insert into tablaproductos (nombre, precio, descripcion, tienda,  stock, elegido)values('Arroz integral', 0.75, '1kg', 'Comercios Paco', 4, false);
 insert into tablaproductos (nombre, precio, descripcion, tienda,  stock, elegido)values('Tortitas de maiz', 1, '10 uds', 'Comercios Paco', 10, false);

@@ -99,7 +99,7 @@ public class ProductoController {
         }
         productoRepository.save(producto);
         model.addAttribute("productos", productoRepository.findAll());
-        return "Usuario/paginaUsuario";
+		return "redirect:/";
     }
 
     @GetMapping("/usuario/quitarDelCarrito/{id}")
