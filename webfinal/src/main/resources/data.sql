@@ -4,11 +4,11 @@ INSERT INTO roles (name) VALUES ('REPARTIDOR');
 INSERT INTO roles (name) VALUES ('CONFINADO');
 
 
-INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Gabriel', 'gabriel@gmail.com', 'gabriel', 'Calle Gabriel, 23');
-INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Roberto', 'roberto@gmail.com', 'roberto', 'Calle Roberto, 23');
-INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Carlota', 'carlota@gmail.com', 'carlota', 'Calle Carlota, 23');
-INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Comercios Irene', 'irene@gmail.com', 'irene', 'Calle Irene, 23');
-INSERT INTO usuarios (nombre, email, contraseña, direccion) VALUES ('Comercios Pedro', 'pedro@gmail.com', 'pedro', 'Calle Pedro, 23');
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Gabriel', 'gabriel@gmail.com', 'gabriel', 'Calle Gabriel, 23', '1');
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Roberto', 'roberto@gmail.com', 'roberto', 'Calle Roberto, 23', '1');
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Carlota', 'carlota@gmail.com', 'carlota', 'Calle Carlota, 23', '1');
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Comercios Irene', 'irene@gmail.com', 'irene', 'Calle Irene, 23', '1');
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Comercios Pedro', 'pedro@gmail.com', 'pedro', 'Calle Pedro, 23', '1');
 
 
 

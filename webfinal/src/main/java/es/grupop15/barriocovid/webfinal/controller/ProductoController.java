@@ -97,9 +97,10 @@ public class ProductoController {
         } else {
             producto.setElegido(true);
         }
+        String tienda = producto.getTienda();
         productoRepository.save(producto);
-        model.addAttribute("productos", productoRepository.findAll());
-		return "redirect:/";
+        model.addAttribute("productos", productoRepository.findByTienda(tienda));
+		return "Usuario/paginaUsuario";
     }
 
     @GetMapping("/usuario/quitarDelCarrito/{id}")

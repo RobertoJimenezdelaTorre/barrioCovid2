@@ -30,12 +30,12 @@ public class Usuario {
     private String nombre;
 
     @NotBlank(message = "El email es obligatoria")
-    @Column(name = "email")
-    private String email;
+    @Column(name = "username")
+    private String username;
 
     @NotBlank(message = "La contraseña es obligatoria")
-    @Column(name = "contraseña")
-    private String contraseña;
+    @Column(name = "password")
+    private String password;
 
     @NotBlank(message = "La direccion es obligatoria")
     @Column(name = "direccion")
@@ -46,17 +46,21 @@ public class Usuario {
 	@JoinTable(name ="users_roles", joinColumns = @JoinColumn (name="user_id"), inverseJoinColumns = @JoinColumn (name="role_id"))
 	private Set<Rol> roles=new HashSet<>();
 
+    private boolean enabled;
+
+
+
 
     public Usuario() { }
 
     
     public Usuario(@NotBlank(message = "El nombre es obligatorio") String nombre,
-            @NotBlank(message = "El email es obligatoria") String email,
-            @NotBlank(message = "La contraseña es obligatoria") String contraseña,
+            @NotBlank(message = "El email es obligatoria") String username,
+            @NotBlank(message = "La contraseña es obligatoria") String password,
             @NotBlank(message = "La direccion es obligatoria") String direccion, Set<Rol> roles) {
         this.nombre = nombre;
-        this.email = email;
-        this.contraseña = contraseña;
+        this.username = username;
+        this.password = password;
         this.direccion = direccion;
         this.roles = roles;
     }
@@ -82,23 +86,23 @@ public class Usuario {
     }
 
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 
-    public String getContraseña() {
-        return contraseña;
+    public String getPassword() {
+        return password;
     }
 
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 
@@ -119,6 +123,15 @@ public class Usuario {
 
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
 }

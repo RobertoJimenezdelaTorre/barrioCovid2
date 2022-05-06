@@ -32,11 +32,14 @@
         </div>
         <div class="inicioSesion">
             <p>Inicia sesión</p>
-            <p><input placeholder="Correo"></p>
-            <p><input placeholder="Contraseña"></p>
-            <!-- <p><a th:href="@{/usuario/paginaPrincipal}" class="boton-inicio-sesion">Iniciar sesion</a></p> -->
+            <form th:action:"@{/login}" method="post">
+                <p><input placeholder="Correo" name="username"></p>
+                <p><input placeholder="Contraseña" name="password"></p>
+                <!-- <p><button type="submit" class="boton-inicio-sesion">Iniciar sesion</button></p> -->
+            </form>
             <button onclick="window.location.href='/usuario/paginaPrincipal'">Iniciar sesión usuario</button>
-            <button onclick="window.location.href='/vendedor/productos/paginaPrincipal'">Iniciar sesión vendedor</button>
+            <button onclick="window.location.href='/vendedor/productos/paginaPrincipal'">Iniciar sesión
+                vendedor</button>
             <p class="olvidadoContraseña">He olvidado mi contraseña</p>
         </div>
 
