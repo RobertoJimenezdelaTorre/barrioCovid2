@@ -1,5 +1,7 @@
 package es.grupop15.barriocovid.webfinal.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,19 +19,27 @@ public class TiendaController {
     public TiendaController(TiendaRepository tiendaRepository) {
         this.tiendaRepository = tiendaRepository;
     }
-
+ 
     @GetMapping("/usuario/paginaPrincipal")
-    public String showUpdateForm(Model model) {
+    public String mostrarTiendas(Model model, Principal principal) {
         model.addAttribute("tiendas", tiendaRepository.findAll());
         return "Usuario/paginaTiendas";
     }
-/* 
-    @GetMapping("/productos/{id}")
+
+    
+/*     @GetMapping("/usuario/paginaPrincipal")
+    public String mostrarTiendas(Model model, Principal principal) {
+        model.addAttribute("tiendas", tiendaRepository.findAll());
+        return "Usuario/paginaPrincipal";
+    } */
+
+
+/*     @GetMapping("/productos/{id}")
     public String mostrarProductosPorTienda(@PathVariable("id") long id, Model model) {
         Tienda tienda = tiendaRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Tienda inválida: " + id));
         model.addAttribute("tienda", tienda);
         return "Usuario/paginaUsuario";
     }
- */
+  */
 }

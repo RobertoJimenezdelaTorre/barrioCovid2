@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ControladorGeneral {
 
+    @GetMapping("/")
+    public String paginaInicial() {
+        return "index";
+    }
+
     @GetMapping("/vendedor/perfilVendedor")
     public String paginaPerfilVendedor() {
         return "Vendedor/perfilVendedor";

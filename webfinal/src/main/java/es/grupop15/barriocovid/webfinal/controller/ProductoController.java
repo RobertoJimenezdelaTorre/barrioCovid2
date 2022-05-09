@@ -26,11 +26,17 @@ public class ProductoController {
 
     // PÁGINAS DE VENDEDOR
 
+/*      @GetMapping("vendedor/paginaPrincipal")
+    public String showUpdateForm(Model model) {
+        model.addAttribute("productos", productoRepository.findAll());
+        return "Vendedor/paginaPrincipal";
+    }  */
+
     @GetMapping("/vendedor/productos/paginaPrincipal")
     public String showUpdateForm(Model model) {
         model.addAttribute("productos", productoRepository.findAll());
         return "Vendedor/paginaPrincipal";
-    }
+    }  
 
     @GetMapping("/vendedor/productos/nuevoProducto")
     public String showAddProductForm(Producto producto) {
@@ -83,7 +89,7 @@ public class ProductoController {
     //PÁGINAS DE USUARIO
 
     @GetMapping("/usuario/productos/{tienda}")
-    public String showProductos(@PathVariable("tienda") String tienda, Model model) {
+    public String mostrarProductosPorTienda(@PathVariable("tienda") String tienda, Model model) {
         model.addAttribute("productos", productoRepository.findByTienda(tienda));
         return "Usuario/paginaUsuario";
     }
