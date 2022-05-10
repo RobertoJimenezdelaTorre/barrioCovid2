@@ -1,10 +1,13 @@
 package es.grupop15.barriocovid.webfinal.model;
 
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+//import java.util.HashSet;
+import java.util.List;
+//import java.util.Set;
 
 import javax.persistence.CascadeType;
+//import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,8 +15,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+/* import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToMany; */
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -42,13 +48,21 @@ public class Usuario{
     @NotBlank(message = "La direccion es obligatoria")
     @Column(name = "direccion")
     private String direccion;
-    
+
+    private String rol;
+
+     /*
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "authority", referencedColumnName = "authority")
+    private Authority authority;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name ="users_roles", joinColumns = @JoinColumn (name="user_id"), inverseJoinColumns = @JoinColumn (name="role_id"))
-	private Set<Rol> roles = new HashSet<>();
+	@JoinTable(name ="authorities", joinColumns = @JoinColumn (name="user_id"), inverseJoinColumns = @JoinColumn (name="role_id"))
+	private Set<Rol> roles = new HashSet<>(); */
 
     private boolean enabled;
+
+
 
 
 
@@ -59,13 +73,14 @@ public class Usuario{
     public Usuario(@NotBlank(message = "El nombre es obligatorio") String nombre,
             @NotBlank(message = "El email es obligatoria") String username,
             @NotBlank(message = "La contraseña es obligatoria") String password,
-            @NotBlank(message = "La direccion es obligatoria") String direccion, Set<Rol> roles) {
+            @NotBlank(message = "La direccion es obligatoria") String direccion, String rol) {
         this.nombre = nombre;
         this.username = username;
         this.password = password;
         this.direccion = direccion;
-        this.roles = roles;
+        this.rol = rol;
     }
+
 
 
     public long getId() {
@@ -117,15 +132,36 @@ public class Usuario{
         this.direccion = direccion;
     }
 
-
-    public Set<Rol> getRoles() {
+/* 
+    public Set<Authority> getRoles() {
         return roles;
     }
 
 
-    public void setRoles(Set<Rol> roles) {
+    public void setRoles(Set<Authority> roles) {
         this.roles = roles;
+    } 
+
+
+    public Authority getAuthority() {
+        return authority;
     }
+
+
+    public void setAuthority(Authority authority) {
+        this.authority = authority;
+    }*/
+
+    public String getRol() {
+        return rol;
+    }
+
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+
 
     public boolean isEnabled() {
         return enabled;

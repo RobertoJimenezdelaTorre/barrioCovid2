@@ -52,6 +52,22 @@ button {
 	text-align: center;
 }
 
+.cerrarSesion {
+    margin-top: 20px;
+    height: 35px;
+	background: #355723;
+	color: #ffffff;
+	border-color: #232323;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px 3px 3px 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	text-align: center;
+    
+}
+
 .telefono {
     height: 30px;
     width: 30px;

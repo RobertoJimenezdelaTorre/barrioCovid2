@@ -56,7 +56,9 @@
                 </p>
             </div>
             <button onclick="window.location.href='/usuario/paginaPrincipal'">Volver</button>
-            <button onclick="window.location.href='/'">Cerrar sesión</button>
+            <form th:action="@{/logout}" method="post">
+                <input class="cerrarSesion" type="submit" value="Logout" />
+            </form>
         </div>
         <div class="infoUsuario">
             Aquí van las entregas solidarias disponibles

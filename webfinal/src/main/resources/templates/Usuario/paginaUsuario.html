@@ -56,7 +56,9 @@
             </div>
             <!-- window.location.href='/usuario/paginaPrincipal' -->
             <button onclick="window.location.href='/usuario/paginaPrincipal'">Volver</button>
-            <button onclick="window.location.href='/'">Cerrar sesión</button>
+            <form th:action="@{/logout}" method="post">
+                <input class="cerrarSesion" type="submit" value="Logout" />
+            </form>
         </div>
         <div class="productos">
             <a class="input-buscar">

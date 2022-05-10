@@ -1,24 +1,45 @@
-INSERT INTO roles (name) VALUES ('USUARIO');
+/* INSERT INTO roles (name) VALUES ('USUARIO');
 INSERT INTO roles (name) VALUES ('VENDEDOR');
 INSERT INTO roles (name) VALUES ('REPARTIDOR');
 INSERT INTO roles (name) VALUES ('CONFINADO');
+ 
 
-
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Gabriel', 'gabriel', '{noop}gabriel', 'Calle Gabriel, 3', '1');
+INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Roberto', 'roberto', '{noop}roberto', 'Calle Roberto, 3', '1');
 INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Gabriel', 'gabriel@gmail.com', '{noop}gabriel', 'Calle Gabriel, 23', '1');
 INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Roberto', 'roberto@gmail.com', '{noop}roberto', 'Calle Roberto, 23', '1');
 INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Carlota', 'carlota@gmail.com', '{noop}carlota', 'Calle Carlota, 23', '1');
 INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Comercios Irene', 'irene@gmail.com', '{noop}irene', 'Calle Irene, 23', '1');
 INSERT INTO usuarios (nombre, username, password, direccion, enabled) VALUES ('Comercios Pedro', 'pedro@gmail.com', '{noop}pedro', 'Calle Pedro, 23', '1');
+*/
+
+INSERT INTO usuarios (nombre, username, password, direccion, rol, enabled) VALUES ('Carlota', 'carlota@gmail.com', '{noop}carlota', 'Calle Carlota, 23', 'USUARIO', true);
+INSERT INTO usuarios (nombre, username, password, direccion, rol, enabled) VALUES ('Gabriel', 'gabriel@gmail.com', '{noop}gabriel', 'Calle Gabriel, 23', 'VENDEDOR', true);
 
 
+/* insert into usuarios(username, password, enabled) values ('gabriel@gmail.com', '{noop}gabriel', true);
+insert into usuarios(username, password, enabled) values ('carlota@gmail.com', '{noop}carlota', true);
+insert into usuarios(username, password, enabled) values ('roberto@gmail.com', '{noop}roberto', true);
+insert into usuarios(username, password, enabled) values ('irene@gmail.com', '{noop}irene', true);
+insert into usuarios(username, password, enabled) values ('pedro@gmail.com', '{noop}pedro', true);
 
+
+insert into authorities(username, authority) values ('gabriel@gmail.com', 'ROLE_USUARIO');
+insert into authorities(username, authority) values ('gabriel@gmail.com', 'ROLE_REPARTIDOR');
+insert into authorities(username, authority) values ('roberto@gmail.com', 'ROLE_USUARIO');
+insert into authorities(username, authority) values ('carlota@gmail.com', 'ROLE_USUARIO');
+insert into authorities(username, authority) values ('irene@gmail.com', 'ROLE_VENDEDOR');
+insert into authorities(username, authority) values ('pedro@gmail.com', 'ROLE_VENDEDOR');
+ */
+
+/* 
 INSERT INTO users_roles (user_id, role_id) VALUES (1, 1); 
 INSERT INTO users_roles (user_id, role_id) VALUES (2, 1);  
 INSERT INTO users_roles (user_id, role_id) VALUES (2, 4); 
 INSERT INTO users_roles (user_id, role_id) VALUES (3, 1); 
 INSERT INTO users_roles (user_id, role_id) VALUES (3, 3); 
 INSERT INTO users_roles (user_id, role_id) VALUES (4, 2); 
-INSERT INTO users_roles (user_id, role_id) VALUES (5, 2);
+INSERT INTO users_roles (user_id, role_id) VALUES (5, 2); */
 
 
 insert into tablaproductos (nombre, precio, descripcion, tienda,  stock, elegido)values('Platanos de canarias', 5, '1kg', 'Comercios Paco', 5, false);

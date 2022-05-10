@@ -34,7 +34,9 @@
                     </a>
                 </p>
             </div>
-            <button onclick="window.location.href='/'">Cerrar sesión</button>
+            <form th:action="@{/logout}" method="post">
+                <input class="cerrarSesion" type="submit" value="Logout" />
+            </form>
         </div>
         <div class="añadirProducto">
             <form action="#" th:action="@{/vendedor/productos/añadir}" th:object="${producto}" method="post">
